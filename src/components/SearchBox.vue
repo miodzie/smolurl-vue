@@ -7,6 +7,11 @@
 
 <script>
 export default {
+  data: function() {
+    return {
+      
+    };
+  },
   methods: {
     hello() {
       alert('hello world!')
