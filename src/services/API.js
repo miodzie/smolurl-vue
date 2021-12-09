@@ -5,7 +5,7 @@
 
 import axios from 'axios'
 
-export const api = axios.create({
-  baseURL: process.env.API_URL,
+export const apiClient = axios.create({
+  baseURL: 'localhost:8000',
   withCredentials: true,
 })
