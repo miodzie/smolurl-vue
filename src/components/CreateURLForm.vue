@@ -3,7 +3,7 @@
     class="flex flex-col max-w-xl p-4 m-auto space-y-4">
     <span 
       class="font-mono text-red-50 bg-red-400 p-1.5"
-      :hidden="error.length == 0">{{ error }}</span>
+      v-if="hasError">{{ error }}</span>
     <input 
       @keyup.enter="createURL"
       placeholder="https://example.com"
@@ -47,6 +47,9 @@ export default {
     })
   },
   computed: {
+    hasError() {
+      return this.error.length > 0
+    },
     buttonText() {
       return this.creating ? '...' : 'create'
     }
