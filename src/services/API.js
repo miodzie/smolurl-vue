@@ -6,6 +6,6 @@
 import axios from 'axios'
 
 export const apiClient = axios.create({
-  baseURL: 'localhost:8000',
+  baseURL: 'localhost:8000/api',
   withCredentials: true,
 })

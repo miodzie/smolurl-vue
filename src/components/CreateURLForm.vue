@@ -58,10 +58,16 @@ export default {
     createURL() {
       this.error = '';
       this.creating = true
-      apiClient.get('ping').then(r => {
+      let data = {
+        url: this.url,
+      }
+      apiClient.post('tiny-url', data).then(r => {
         console.log(r)
       })
-      .catch(_ => { this.error = "someting brokedez oops" })
+      .catch(e => {
+          this.error = "someting brokedez oops" 
+          console.log(e)
+        })
       .finally(() => {
         setTimeout(() => this.creating = false, 1500)
       })
