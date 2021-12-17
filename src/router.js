@@ -1,9 +1,10 @@
 import { createRouter, createWebHashHistory, RouterView } from 'vue-router'
-import CreateURLForm from './components/CreateURLForm.vue'
+import Home from './pages/Home.vue'
+import MyUrls from './pages/MyUrls.vue'
 
 const routes = [  
-  { path: '/', component: CreateURLForm },
-  { path: '/my/urls', component: CreateURLForm }
+  { path: '/', component: Home },
+  { path: '/mine', component: MyUrls }
 ]
 
 const router = createRouter({

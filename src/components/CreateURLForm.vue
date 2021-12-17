@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { apiClient }  from '../services/API.js'
+import api from '../services/API.js'
 
 export default {
   data: function() {
@@ -61,7 +61,7 @@ export default {
       let data = {
         url: this.url,
       }
-      apiClient.post('tiny-url', data).then(r => {
+      api.post('tiny-url', data).then(r => {
         console.log(r)
       })
       .catch(e => {

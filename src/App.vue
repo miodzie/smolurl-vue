@@ -6,13 +6,15 @@ import Footer from './components/Footer.vue'
 </script>
 
 <template>
-  <router-view></router-view>
+  <div class="container mt-8 mx-auto pd-4 mt-6 space-y-4 pt-8">
+    <router-view></router-view>
+  </div>
   <Footer />
 </template>
 
 <style>
 #app {
   text-align: center;
-  margin-top: 10%;
+  /* margin-top: 10%; */
 }
 </style>
